@@ -72,7 +72,7 @@ function response(replyToken, msg) {
     messages: [
       {
         type: "text",
-        text: msgF,
+        text: msg,
       },
     ],
   };
