@@ -16,7 +16,7 @@
 
 ---
 
-## 📋 前置準備
+## 前置準備
 
 - Google 帳號（用於建立試算表與 GAS 專案）
 - 一份 Google 試算表（Google Sheet）
@@ -24,7 +24,7 @@
 
 ---
 
-## 🧾 Step 1：建立 Google Sheet 並取得 ID
+## Step 1：建立 Google Sheet 並取得 ID
 
 1. 前往 [Google Sheet](https://sheets.google.com/) 新增試算表。
 2. 建立一份試算表（例如命名為 `LineBotData`）。
@@ -43,7 +43,21 @@
 
 ---
 
-## 🚀 Step 3：部署為網頁應用程式
+## Step 3： 取得 LINE Bot Token 與 Secret
+
+1. 前往 [LINE Developers Console](https://developers.line.biz/console/)
+2. 建立或選擇一個 Provider
+3. 新增 Messaging API Channel
+4. 在 Channel 設定頁面中取得：
+   - **Channel access token**
+5. 將這些值填入 GAS 程式中的變數，例如：
+   ```js
+   var lineToken = "YOUR_ACCESS_TOKEN"; // REPLACE TO YOUR OWN LINE BOT TOKEN
+   ```
+
+---
+
+## Step 4：部署為網頁應用程式
 
 1. 點選 **部署 → 新部署**。
 2. 選擇 **網頁應用程式 (Web App)**。
@@ -58,7 +72,7 @@
 
 ---
 
-## 💬 Step 4：設定 LINE Webhook
+## Step 5：設定 LINE Webhook
 
 1. 登入 [LINE Developers Console](https://developers.line.biz/console/)。
 2. 進入你的 Messaging API Channel。
@@ -133,7 +147,7 @@ This project demonstrates how to use **Google Apps Script (GAS)** to integrate t
 
 ---
 
-## 🧾 Step 1: Create a Google Sheet and Get Its ID
+## Step 1: Create a Google Sheet and Get Its ID
 
 1. Go to [Google Sheets](https://sheets.google.com/) and create a new spreadsheet.
 2. Name it, for example, `LineBotData`.
@@ -145,7 +159,7 @@ This project demonstrates how to use **Google Apps Script (GAS)** to integrate t
 
 ---
 
-## 💻 Step 2: Create a Google Apps Script Project
+## Step 2: Create a Google Apps Script Project
 
 1. In your Google Sheet, click **Extensions → Apps Script**.
 2. In the newly opened Apps Script editor, delete the default content.
@@ -153,7 +167,21 @@ This project demonstrates how to use **Google Apps Script (GAS)** to integrate t
 
 ---
 
-## 🚀 Step 3: Deploy as a Web App
+## Step 3: Get LINE Bot Token and Secret
+
+1. Go to the [LINE Developers Console](https://developers.line.biz/console/).
+2. Create or select an existing **Provider**.
+3. Add a new **Messaging API Channel**.
+4. In the Channel settings page, you’ll find:
+   - **Channel access token**
+5. Copy these values and paste them into your Google Apps Script as variables, for example:
+   ```js
+   var lineToken = "YOUR_ACCESS_TOKEN"; // REPLACE TO YOUR OWN LINE BOT TOKEN
+   ```
+
+---
+
+## Step 4: Deploy as a Web App
 
 1. Click **Deploy → New Deployment**.
 2. Under “Select type,” choose **Web App**.
@@ -170,7 +198,7 @@ This project demonstrates how to use **Google Apps Script (GAS)** to integrate t
 
 ---
 
-## 💬 Step 4: Set Up the LINE Webhook
+## Step 5: Set Up the LINE Webhook
 
 1. Go to [LINE Developers Console](https://developers.line.biz/console/).
 2. Open your **Messaging API Channel**.
